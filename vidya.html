@@ -1,301 +1,89 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DEP Program — Student Site (Single File)</title>
-
-  <!-- Simple styles so it looks like a student project -->
-  <style>
-    :root {
-      --accent: #2b6cb0;
-      --muted: #666;
-      --card-bg: #ffffff;
-      --page-bg: #eef4ff;
-      --max-width: 980px;
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--page-bg);
-      color: #222;
-      line-height: 1.45;
-      padding-bottom: 40px;
-    }
-
-    header {
-      background: var(--accent);
-      color: white;
-      padding: 16px 18px;
-      text-align: center;
-    }
-    header .sub { font-size: .95rem; opacity: .95; }
-
-    nav {
-      display:flex;
-      gap:8px;
-      justify-content:center;
-      flex-wrap:wrap;
-      padding:10px;
-      background: #fff;
-      border-bottom: 1px solid #d7e4f6;
-      position: sticky;
-      top: 0;
-      z-index: 40;
-    }
-    .nav-link {
-      padding:8px 12px;
-      text-decoration:none;
-      color:var(--accent);
-      font-weight:600;
-      border-radius:6px;
-    }
-    .nav-link.active {
-      background: var(--accent);
-      color: white;
-      box-shadow: 0 2px 6px rgba(43,108,176,.12);
-    }
-
-    main {
-      max-width: var(--max-width);
-      margin: 18px auto;
-      padding: 16px;
-    }
-
-    /* each "page" */
-    .page {
-      background: var(--card-bg);
-      border-radius: 8px;
-      padding: 18px;
-      box-shadow: 0 2px 8px rgba(15,30,60,0.06);
-      display: none; /* JS will show the active one */
-    }
-    .page.active { display: block; }
-
-    h1, h2 { margin: 0 0 8px 0; }
-    p { margin: 0 0 12px 0; }
-
-    .cards { display:grid; gap:12px; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
-    .card { padding:12px; border-radius:6px; background:#fbfdff; border:1px solid #e6eefc; }
-    .btn { display:inline-block; padding:8px 12px; text-decoration:none; border-radius:6px; background:var(--accent); color:white; margin-top:8px; font-weight:600; }
-
-    footer { max-width: var(--max-width); margin: 16px auto 40px; text-align:center; color:var(--muted); font-size:.95rem; }
-
-    /* gallery */
-    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:12px;}
-    .thumb { background:#fff; padding:8px; border-radius:6px; border:1px solid #eef6f0; text-align:center; }
-    .thumb img { width:100%; height:100px; object-fit:cover; border-radius:4px; display:block; margin-bottom:6px; }
-
-    /* testimonials */
-    blockquote { margin:8px 0; padding:10px 12px; border-left:4px solid var(--accent); background:#f6fbff; border-radius:4px; }
-
-    /* small responsive tweak */
-    @media (max-width:520px){
-      nav { padding:8px; gap:6px; }
-      header { padding:12px; }
-    }
-  </style>
+<title>DEP Program Journey</title>
 </head>
 <body>
 
-  <header>
-    <h1>DEP Program — Student Showcase</h1>
-  
-  </header>
+<!-- Home Section -->
+<div id="home" style="background-color: #E8F0FE; padding: 10px; color: #1A237E;">
+<h1>Welcome to Our DEP Program Journey</h1>
+<p>The Digital Empowerment Program (DEP) is helping students learn computers and digital skills.</p>
+<p>Explore our pages to know more about what we learned!</p>
 
-  <nav id="main-nav" aria-label="Main navigation">
-    <a class="nav-link" href="#home" data-target="home">Home</a>
-    <a class="nav-link" href="#about" data-target="about">About</a>
-    <a class="nav-link" href="#journey" data-target="journey">Our Journey</a>
-    <a class="nav-link" href="#impact" data-target="impact">Impact</a>
-    <a class="nav-link" href="#gallery" data-target="gallery">Gallery</a>
-  </nav>
+<h3>Pages</h3>
+<ul>
+    <li><a href="#about">About DEP Program</a></li>
+    <li><a href="#journey">Our Learning Journey</a></li>
+    <li><a href="#impact">Impact and Testimonials</a></li>
+    <li><a href="#gallery">Photo Gallery</a></li>
+</ul>
+</div>
 
-  <main>
-    <!-- HOME -->
-    <section id="home" class="page">
-      <h2>Welcome</h2>
-      <p>This mini-site documents the Digital Empowerment Program (DEP). It's made to be small, editable, and clearly student-made — so anyone can change text, images, or layout easily.</p>
+<hr>
 
-      <div class="cards">
-        <div class="card">
-          <h3>About DEP</h3>
-          <p>Short course on MS Office, email, and internet basics — made for learners new to computers.</p>
-          <a class="btn" data-target="about">Read more</a>
-        </div>
+<!-- About Section -->
+<div id="about" style="background-color: #FFF8E1; padding: 10px; color: #BF360C;">
+<h1>About the DEP Program</h1>
+<p>The Digital Empowerment Program (DEP) by VIDYA teaches students computer basics and digital skills.</p>
 
-        <div class="card">
-          <h3>Our Journey</h3>
-          <p>Step-by-step learning: basics → typing → MS Office → online safety.</p>
-          <a class="btn" data-target="journey">See journey</a>
-        </div>
+<h3>Courses We Learn</h3>
+<ul>
+    <li>MS office</li>
+    <li>Data Entry</li>
+    <li>Java</li>
+    <li>Python</li>
+    <li>Digital Marketing</li>
+    <li>Hardware and Networking</li>
+    <li>Web development</li>
+    <li>Web designing</li>
 
-        <div class="card">
-          <h3>Impact</h3>
-          <p>Real outcomes: simple resumes, job applications, new confidence.</p>
-          <a class="btn" data-target="impact">Testimonials</a>
-        </div>
+</ul>
 
-        <div class="card">
-          <h3>Gallery</h3>
-          <p>Photos of class activities and presentations (replace placeholders later).</p>
-          <a class="btn" data-target="gallery">Open gallery</a>
-        </div>
-      </div>
-    </section>
+<p><a href="#home">Back to Home</a></p>
+</div>
 
-    <!-- ABOUT -->
-    <section id="about" class="page">
-      <h2>About the DEP Program</h2>
-      <p>The Digital Empowerment Program helps students learn practical digital skills that make everyday tasks (job hunting, schoolwork, presentations) easier.</p>
+<hr>
 
-      <h3>Key topics</h3>
-      <ul>
-        <li>MS Word: formatting, resume basics</li>
-        <li>MS Excel: simple tables and formulas</li>
-        <li>MS PowerPoint: designing slides</li>
-        <li>Email & Internet: accounts, safe searching</li>
-      </ul>
+<!-- Journey Section -->
+<div id="journey" style="background-color: #E1F5FE; padding: 10px; color: #0D47A1;">
+<h1>Our Learning Journey</h1>
+<p>At first, we didn’t know much about computers. Slowly we learned typing, saving files, and using software.</p>
+<p>We also did fun activities like drawing in Paint and making PowerPoint slides.</p>
+<p>Now we can use computers confidently!</p>
 
-      <p><a class="btn" data-target="home">← Home</a> <a class="btn" style="background:#28a745" data-target="journey">Next →</a></p>
-    </section>
+<p><a href="#home">Back to Home</a></p>
+</div>
 
-    <!-- JOURNEY -->
-    <section id="journey" class="page">
-      <h2>Our Learning Journey</h2>
+<hr>
 
-      <div class="card" style="margin-bottom:10px;">
-        <strong>Week 1 — Computer basics</strong>
-        <p>Power on/off, mouse & keyboard practice, opening files.</p>
-      </div>
+<!-- Impact Section -->
+<div id="impact" style="background-color: #F3E5F5; padding: 10px; color: #4A148C;">
+<h1>Impact and Testimonials</h1>
+<p>The DEP program has changed many lives.</p>
+<ul>
+    <li>“I can now make a resume and send emails.” – <b>Anusha</b></li>
+    <li>“I learned MS Word and want to do data entry work.” – <b>Raziya</b></li>
+    <li>“I enjoy learning computers a lot.” – <b>Tanveer</b></li>
+</ul>
 
-      <div class="card" style="margin-bottom:10px;">
-        <strong>Week 2 — Typing & MS Word</strong>
-        <p>Typing drills, saving files, creating a simple resume.</p>
-      </div>
+<p><a href="#home">Back to Home</a></p>
+</div>
 
-      <div class="card" style="margin-bottom:10px;">
-        <strong>Week 3 — Excel & PowerPoint</strong>
-        <p>Simple formulas, charts, and making a class presentation.</p>
-      </div>
+<hr>
 
-      <div class="card">
-        <strong>Week 4 — Internet & Email</strong>
-        <p>Creating an email, learning to search, and online safety basics.</p>
-      </div>
+<!-- Gallery Section -->
+<div id="gallery" style="background-color: #E8F5E9; padding: 10px; color: #1B5E20;">
+<h1>Photo Gallery</h1>
+<p>Here are some photos from our classes.</p>
 
-      <p style="margin-top:12px;"><a class="btn" data-target="about">← Back</a> <a class="btn" data-target="impact">Next →</a></p>
-    </section>
+<img src="Photo1.jpg" width="500" height="250" alt="Photo 1">
+<img src="photo2.jpg" width="200" height="250" alt="Photo 2">
+<img src="photo3.jpg" width="250" height="250" alt="Photo 3">
 
-    <!-- IMPACT -->
-    <section id="impact" class="page">
-      <h2>Impact & Testimonials</h2>
 
-      <blockquote>
-        “I made my first resume and emailed it to an employer.” — <strong>Anusha</strong>
-      </blockquote>
+<p><a href="#home">Back to Home</a></p>
+</div>
 
-      <blockquote>
-        “Now I can create simple spreadsheets for my small shop.” — <strong>Vikram</strong>
-      </blockquote>
-
-      <blockquote>
-        “I used to be scared of computers, now I teach my younger cousin.” — <strong>Roshni</strong>
-      </blockquote>
-
-      <h3>Outcomes</h3>
-      <ul>
-        <li>Students can apply for basic jobs online.</li>
-        <li>Confidence with digital tools increased.</li>
-        <li>Some students want to teach these skills locally.</li>
-      </ul>
-
-      <p style="margin-top:12px;"><a class="btn" data-target="journey">← Back</a> <a class="btn" data-target="gallery">Next →</a></p>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="page">
-      <h2>Photo Gallery</h2>
-      <p>Replace these placeholders (photo1.jpg, photo2.jpg, photo3.jpg) with your own images in the same folder.</p>
-
-      <div class="grid">
-        <div class="thumb">
-          <img src="Photo1.jpg" alt="Class activity (placeholder)" onerror="this.style.opacity=.5; this.nextElementSibling.textContent='photo1.jpg (missing)';" />
-          <div>Class activity</div>
-        </div>
-
-        <div class="thumb">
-          <img src="photo2.jpg" alt="Students working (placeholder)" onerror="this.style.opacity=.5; this.nextElementSibling.textContent='photo2.jpg (missing)';" />
-          <div>Students working</div>
-        </div>
-
-        <div class="thumb">
-          <img src="photo3.jpg" alt="Presentation (placeholder)" onerror="this.style.opacity=.5; this.nextElementSibling.textContent='photo3.jpg (missing)';" />
-          <div>Presentation</div>
-        </div>
-
-        <div class="thumb">
-          <img src="https://via.placeholder.com/300x200?text=Activity" alt="placeholder">
-          <div>Activity (placeholder)</div>
-        </div>
-      </div>
-
-      <p style="margin-top:12px;"><a class="btn" data-target="home">← Home</a></p>
-    </section>
-
-  </main>
-
-  
-
-  <!-- Tiny JS to handle "page" switching and nav active state -->
-  <script>
-    (function(){
-      // pages and nav
-      const pages = Array.from(document.querySelectorAll('.page'));
-      const navLinks = Array.from(document.querySelectorAll('.nav-link'));
-      const btns = Array.from(document.querySelectorAll('[data-target]'));
-
-      function showPage(id, push=true){
-        pages.forEach(p => p.classList.toggle('active', p.id === id));
-        navLinks.forEach(n => n.classList.toggle('active', n.dataset.target === id));
-        if(push) history.pushState({page:id}, '', '#' + id);
-      }
-
-      // click nav links and buttons
-      navLinks.concat(btns).forEach(el=>{
-        el.addEventListener('click', function(evt){
-          evt.preventDefault();
-          const target = this.dataset.target;
-          if(target) showPage(target);
-        });
-      });
-
-      // on load: use hash or default "home"
-      const initial = (location.hash && location.hash.slice(1)) || 'home';
-      // fallback if id doesn't exist
-      const valid = pages.some(p => p.id === initial) ? initial : 'home';
-      showPage(valid, false);
-
-      // handle back/forward
-      window.addEventListener('popstate', function(e){
-        const id = (location.hash && location.hash.slice(1)) || 'home';
-        showPage(id, false);
-      });
-
-      // accessibility: allow switching pages with left/right arrows
-      window.addEventListener('keydown', function(e){
-        if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
-          const ids = pages.map(p => p.id);
-          let i = ids.indexOf(document.querySelector('.page.active').id);
-          i = (e.key === 'ArrowRight') ? (i+1) % ids.length : (i-1+ids.length) % ids.length;
-          showPage(ids[i]);
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
-
-
