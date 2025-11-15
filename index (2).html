@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DEP Program — Student Site (Single File)</title>
+
+  <!-- Simple styles so it looks like a student project -->
+  <style>
+    :root {
+      --accent: #2b6cb0;
+      --muted: #666;
+      --card-bg: #ffffff;
+      --page-bg: #eef4ff;
+      --max-width: 980px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--page-bg);
+      color: #222;
+      line-height: 1.45;
+      padding-bottom: 40px;
+    }
+
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 16px 18px;
+      text-align: center;
+    }
+    header .sub { font-size: .95rem; opacity: .95; }
+
+    nav {
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      flex-wrap:wrap;
+      padding:10px;
+      background: #fff;
+      border-bottom: 1px solid #d7e4f6;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .nav-link {
+      padding:8px 12px;
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:600;
+      border-radius:6px;
+    }
+    .nav-link.active {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 2px 6px rgba(43,108,176,.12);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 18px auto;
+      padding: 16px;
+    }
+
+    /* each "page" */
+    .page {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(15,30,60,0.06);
+      display: none; /* JS will show the active one */
+    }
+    .page.active { display: block; }
+
+    h1, h2 { margin: 0 0 8px 0; }
+    p { margin: 0 0 12px 0; }
+
+    .cards { display:grid; gap:12px; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); margin-top:12px; }
+    .card { padding:12px; border-radius:6px; background:#fbfdff; border:1px solid #e6eefc; }
+    .btn { display:inline-block; padding:8px 12px; text-decoration:none; border-radius:6px; background:var(--accent); color:white; margin-top:8px; font-weight:600; }
+
+    footer { max-width: var(--max-width); margin: 16px auto 40px; text-align:center; color:var(--muted); font-size:.95rem; }
+
+
+
+    /* testimonials */
+    blockquote { margin:8px 0; padding:10px 12px; border-left:4px solid var(--accent); background:#f6fbff; border-radius:4px; }
+
+    /* small responsive tweak */
+    @media (max-width:520px){
+      nav { padding:8px; gap:6px; }
+      header { padding:12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DEP Program — Student Showcase</h1>
+
+  </header>
+
+  <nav id="main-nav" aria-label="Main navigation">
+    <a class="nav-link" href="#home" data-target="home">Home</a>
+    <a class="nav-link" href="#about" data-target="about">About</a>
+    <a class="nav-link" href="#journey" data-target="journey">Our Journey</a>
+    <a class="nav-link" href="#impact" data-target="impact">Impact</a>
+    
+  </nav>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page">
+      <h2>Welcome</h2>
+      <p>This mini-site documents the Digital Empowerment Program (DEP). </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>About DEP</h3>
+          <p>Short course on MS Office, email, and internet basics — made for learners new to computers.</p>
+          <a class="btn" data-target="about">Read more</a>
+        </div>
+
+        <div class="card">
+          <h3>Our Journey</h3>
+          <p>Step-by-step learning: basics → typing → MS Office → online safety.</p>
+          <a class="btn" data-target="journey">See journey</a>
+        </div>
+
+        <div class="card">
+          <h3>Impact</h3>
+          <p>Real outcomes: simple resumes, job applications, new confidence.</p>
+          <a class="btn" data-target="impact">Testimonials</a>
+        </div>
+
+             </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+      <h2>About the DEP Program</h2>
+      <p>The Digital Empowerment Program helps students learn practical digital skills that make everyday tasks (job hunting, schoolwork, presentations) easier.</p>
+
+      <h3>Key topics</h3>
+      <ul>
+        <li>MS Word: formatting, resume basics</li>
+        <li>MS Excel: simple tables and formulas</li>
+        <li>MS PowerPoint: designing slides</li>
+        <li>Email & Internet: accounts, safe searching</li>
+      </ul>
+
+      <p><a class="btn" data-target="home">← Home</a> <a class="btn" style="background:#28a745" data-target="journey">Next →</a></p>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="page">
+      <h2>Our Learning Journey</h2>
+
+      <div class="card" style="margin-bottom:10px;">
+        <strong>Week 1 — Computer basics</strong>
+        <p>Power on/off, mouse & keyboard practice, opening files.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:10px;">
+        <strong>Week 2 — Typing & MS Word</strong>
+        <p>Typing drills, saving files, creating a simple resume.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:10px;">
+        <strong>Week 3 — Excel & PowerPoint</strong>
+        <p>Simple formulas, charts, and making a class presentation.</p>
+      </div>
+
+      <div class="card">
+        <strong>Week 4 — Internet & Email</strong>
+        <p>Creating an email, learning to search, and online safety basics.</p>
+      </div>
+
+      <p style="margin-top:12px;"><a class="btn" data-target="about">← Back</a> <a class="btn" data-target="impact">Next →</a></p>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="page">
+      <h2>Impact & Testimonials</h2>
+
+      <blockquote>
+        “I made my first resume and emailed it to an employer.” — <strong>Anusha</strong>
+      </blockquote>
+
+      <blockquote>
+        “Now I can create simple spreadsheets for my small shop.” — <strong>Vikram</strong>
+      </blockquote>
+
+      <blockquote>
+        “I used to be scared of computers, now I teach my younger cousin.” — <strong>Roshni</strong>
+      </blockquote>
+
+      <h3>Outcomes</h3>
+      <ul>
+        <li>Students can apply for basic jobs online.</li>
+        <li>Confidence with digital tools increased.</li>
+        <li>Some students want to teach these skills locally.</li>
+      </ul>
+
+      <p style="margin-top:12px;"><a class="btn" data-target="journey">← Back</a> <a class="btn" data-target="gallery">Next →</a></p>
+    </section>
+
+   
+  </main>
+
+  
+
+  <!-- Tiny JS to handle "page" switching and nav active state -->
+  <script>
+    (function(){
+      // pages and nav
+      const pages = Array.from(document.querySelectorAll('.page'));
+      const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+      const btns = Array.from(document.querySelectorAll('[data-target]'));
+
+      function showPage(id, push=true){
+        pages.forEach(p => p.classList.toggle('active', p.id === id));
+        navLinks.forEach(n => n.classList.toggle('active', n.dataset.target === id));
+        if(push) history.pushState({page:id}, '', '#' + id);
+      }
+
+      // click nav links and buttons
+      navLinks.concat(btns).forEach(el=>{
+        el.addEventListener('click', function(evt){
+          evt.preventDefault();
+          const target = this.dataset.target;
+          if(target) showPage(target);
+        });
+      });
+
+      // on load: use hash or default "home"
+      const initial = (location.hash && location.hash.slice(1)) || 'home';
+      // fallback if id doesn't exist
+      const valid = pages.some(p => p.id === initial) ? initial : 'home';
+      showPage(valid, false);
+
+      // handle back/forward
+      window.addEventListener('popstate', function(e){
+        const id = (location.hash && location.hash.slice(1)) || 'home';
+        showPage(id, false);
+      });
+
+      // accessibility: allow switching pages with left/right arrows
+      window.addEventListener('keydown', function(e){
+        if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
+          const ids = pages.map(p => p.id);
+          let i = ids.indexOf(document.querySelector('.page.active').id);
+          i = (e.key === 'ArrowRight') ? (i+1) % ids.length : (i-1+ids.length) % ids.length;
+          showPage(ids[i]);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
