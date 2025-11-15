@@ -83,7 +83,10 @@
 
     footer { max-width: var(--max-width); margin: 16px auto 40px; text-align:center; color:var(--muted); font-size:.95rem; }
 
-
+    /* gallery */
+    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:12px;}
+    .thumb { background:#fff; padding:8px; border-radius:6px; border:1px solid #eef6f0; text-align:center; }
+    .thumb img { width:100%; height:100px; object-fit:cover; border-radius:4px; display:block; margin-bottom:6px; }
 
     /* testimonials */
     blockquote { margin:8px 0; padding:10px 12px; border-left:4px solid var(--accent); background:#f6fbff; border-radius:4px; }
@@ -99,7 +102,7 @@
 
   <header>
     <h1>DEP Program — Student Showcase</h1>
-
+    <div class="sub">A simple single-file site that looks like a student project</div>
   </header>
 
   <nav id="main-nav" aria-label="Main navigation">
@@ -107,14 +110,14 @@
     <a class="nav-link" href="#about" data-target="about">About</a>
     <a class="nav-link" href="#journey" data-target="journey">Our Journey</a>
     <a class="nav-link" href="#impact" data-target="impact">Impact</a>
-    
+    <a class="nav-link" href="#gallery" data-target="gallery">Gallery</a>
   </nav>
 
   <main>
     <!-- HOME -->
     <section id="home" class="page">
       <h2>Welcome</h2>
-      <p>This mini-site documents the Digital Empowerment Program (DEP). </p>
+      <p>This mini-site documents the Digital Empowerment Program (DEP). It's made to be small, editable, and clearly student-made — so anyone can change text, images, or layout easily.</p>
 
       <div class="cards">
         <div class="card">
@@ -135,7 +138,12 @@
           <a class="btn" data-target="impact">Testimonials</a>
         </div>
 
-             </div>
+        <div class="card">
+          <h3>Gallery</h3>
+          <p>Photos of class activities and presentations (replace placeholders later).</p>
+          <a class="btn" data-target="gallery">Open gallery</a>
+        </div>
+      </div>
     </section>
 
     <!-- ABOUT -->
@@ -207,10 +215,41 @@
       <p style="margin-top:12px;"><a class="btn" data-target="journey">← Back</a> <a class="btn" data-target="gallery">Next →</a></p>
     </section>
 
-   
+    <!-- GALLERY -->
+    <section id="gallery" class="page">
+      <h2>Photo Gallery</h2>
+      <p>Replace these placeholders (photo1.jpg, photo2.jpg, photo3.jpg) with your own images in the same folder.</p>
+
+      <div class="grid">
+        <div class="thumb">
+          <img src="photo1.jpg" alt="Class activity (placeholder)" onerror="this.style.opacity=.5; this.nextElementSibling.textContent='photo1.jpg (missing)';" />
+          <div>Class activity</div>
+        </div>
+
+        <div class="thumb">
+          <img src="photo2.jpg" alt="Students working (placeholder)" onerror="this.style.opacity=.5; this.nextElementSibling.textContent='photo2.jpg (missing)';" />
+          <div>Students working</div>
+        </div>
+
+        <div class="thumb">
+          <img src="photo3.jpg" alt="Presentation (placeholder)" onerror="this.style.opacity=.5; this.nextElementSibling.textContent='photo3.jpg (missing)';" />
+          <div>Presentation</div>
+        </div>
+
+        <div class="thumb">
+          <img src="https://via.placeholder.com/300x200?text=Activity" alt="placeholder">
+          <div>Activity (placeholder)</div>
+        </div>
+      </div>
+
+      <p style="margin-top:12px;"><a class="btn" data-target="home">← Home</a></p>
+    </section>
+
   </main>
 
-  
+  <footer>
+    Made by students — edit any text or swap images. File: single HTML (no frameworks).
+  </footer>
 
   <!-- Tiny JS to handle "page" switching and nav active state -->
   <script>
@@ -260,3 +299,4 @@
   </script>
 </body>
 </html>
+
